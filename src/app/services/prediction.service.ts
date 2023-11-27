@@ -10,7 +10,7 @@ export class PredictionService {
   constructor() { }
 
   getBabyPredictions() {
-    // Put an API call here instead
+    // TODO: Put an API call here instead
     let predictions = [
       new Prediction("David", new Date("2023-12-24"), true),
       new Prediction("Sara", new Date("2024-01-02"), true),
