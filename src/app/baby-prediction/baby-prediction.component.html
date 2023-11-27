@@ -1,0 +1,31 @@
+
+
+<h1>Hvornår kommer Baby? <fa-icon [icon]="faBaby"></fa-icon></h1>
+
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Navn</th>
+            <th scope="col">Forudsigelse</th>
+            <th scope="col">Gambler?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prediction of predictions" >
+            <td [class]="prediction.isPastDate ? 'table-danger' : ''">{{ prediction.name }}</td>
+            <td [class]="prediction.isPastDate ? 'table-danger' : ''">{{ prediction.prediction | date:"dd MMM, yyyy" }}</td>
+            <td [class]="prediction.isPastDate ? 'table-danger' : prediction.betting ? 'table-info' : 'table-warning'">{{ prediction.betting ? "Ja" : "Nej" }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Kan jeg deltage??</h2>
+
+<p>Ja da! Skriv dit navn og dit gæt til David, så tilføjer han dig til siden<fa-icon [icon]="faSmile"></fa-icon></p>
+
+<h3>Og Gambling?</h3>
+<p>
+    Sig til hvis du vil være med i puljen. Vi giver Kr. 1000,- hver. Dem der rammer den rigtige dato deler puljen. <br />
+    Indbetaling til puljen sker på MobilePay. Kontakt David for detaljer
+</p>
